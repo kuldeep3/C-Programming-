@@ -1,24 +1,31 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    string s,mpty="";
-    cin>>s;
-    int len =s.length();
-    for (int i = len-1; i >= 0; i--)
-    {
-        mpty = mpty+s[i];
-    }
-    if (mpty==s)
-    {
-        cout<<"YES";
-    }
-    else
-    {
-        cout<<"NO";
-    }
-    
-    
-    return 0;
 
+    ios_base::sync_with_stdio(false);
+
+    cin.tie(NULL);
+
+    cout.tie(NULL);
+
+    string original_str, reverse_str;
+
+    cin >> original_str;
+
+    reverse_str = original_str;
+
+    reverse(reverse_str.begin(), reverse_str.end());
+
+    if(reverse_str == original_str)
+        cout << "YES\n";
+
+    else
+        cout << "NO\n";
+
+    reverse_str.clear();
+
+    original_str.clear();
+
+    return 0;
 }
